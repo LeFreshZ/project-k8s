@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: payment-service-config
+  namespace: microservices
+data:
+  SPRING_PROFILES_ACTIVE: "docker"
+  MONGO_DATABASE: "payment_db"
+  KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+  AUTH_SERVICE_URL: "http://auth-service:8080"
+  RANDOM_API_URL: "https://www.random.org/integers"
